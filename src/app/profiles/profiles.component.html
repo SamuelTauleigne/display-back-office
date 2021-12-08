@@ -1,0 +1,36 @@
+<!--
+<h2>{{profile.tag | uppercase}} Details</h2>
+<div><span>tag: </span>{{profile.tag}}</div>
+<div><span>content: </span>{{profile.content}}</div>
+-->
+
+<!--
+<div>
+    <label for="tag">Profile @ : </label>
+    <input id="tag" [(ngModel)]="profile.tag" placeholder="tag">
+</div>
+-->
+
+<h2>All Profiles</h2>
+<ul class="profiles">
+    <li *ngFor="let profile of profiles">
+        <a routerLink="/detail/{{profile.tag}}">
+        <span class="tag">{{profile.tag}}</span>
+      </a>
+  </li>
+</ul>
+
+<!--
+<div *ngIf="selectedProfile">
+    <h2>{{selectedProfile.tag | uppercase}} Details</h2>
+    <div><span>tag: </span>{{selectedProfile.tag}}</div>
+    <div>
+        <label for="profile-content">Profile content: </label>
+        <input id="profile-content" [(ngModel)]="selectedProfile.content" placeholder="content">
+    </div>
+</div>
+-->
+
+<!--
+<app-profile-detail [profile]="selectedProfile"></app-profile-detail>
+-->

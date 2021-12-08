@@ -1,0 +1,7 @@
+<h2>Top {{numberOfTopProfiles}} Profiles</h2>
+<div class="profiles-menu">
+  <a *ngFor="let profile of profiles"
+    routerLink="/detail/{{profile.tag}}">
+    {{profile.tag}}
+  </a>
+</div>
